@@ -1,15 +1,12 @@
 import factorymethod.Institute;
 import factorymethod.documents.IDocument;
+import factorymethod.documents.diploma.DiplomaType;
 import singleton.SingleLogger;
 
 public class Main {
     public static void main(String[] args) {
-
 //        makeSingleLoggerWork();
-
         makeInstituteWork();
-
-
     }
 
     private static void makeSingleLoggerWork() {
@@ -20,7 +17,7 @@ public class Main {
 
     private static void makeInstituteWork() {
         Institute institute = new Institute();
-        IDocument someDiploma = institute.createDiplomaSpecialist("Red");
+        IDocument someDiploma = institute.createDiplomaSpecialist(DiplomaType.RED);
         System.out.println(someDiploma.getID());
     }
 }

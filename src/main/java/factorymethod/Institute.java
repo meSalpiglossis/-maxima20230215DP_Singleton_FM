@@ -9,42 +9,42 @@ import factorymethod.documents.studentcard.StudentCardElectronic;
 
 public class Institute {
 
-    public IDocument createDiplomaSpecialist(String type) {
+    public IDocument createDiplomaSpecialist(DiplomaType type) {
         switch (type) {
-            case "Red": return new DiplomaSpecialistRed();
-            case "Blue": return new DiplomaSpecialistBlue();
+            case RED: return new DiplomaSpecialistRed();
+            case BLUE: return new DiplomaSpecialistBlue();
             default: return null;
         }
     }
 
-    public IDocument createDiplomaMaster(String type) {
+    public IDocument createDiplomaMaster(DiplomaType type) {
         switch (type) {
-            case "Red": return new DiplomaMasterRed();
-            case "Blue": return new DiplomaMasterBlue();
+            case RED: return new DiplomaMasterRed();
+            case BLUE: return new DiplomaMasterBlue();
             default: return null;
         }
     }
 
-    public IDocument createDiplomaBachelor(String type) {
+    public IDocument createDiplomaBachelor(DiplomaType type) {
         switch (type) {
-            case "Red": return new DiplomaBachelorRed();
-            case "Blue": return new DiplomaBachelorBlue();
+            case RED: return new DiplomaBachelorRed();
+            case BLUE: return new DiplomaBachelorBlue();
             default: return null;
         }
     }
 
-    public IDocument createRecordBook(String type) {
+    public IDocument createRecordBook(DocumentType type) {
         switch (type) {
-            case "Plain": return new RecordBook();
-            case "Electronic": return new RecordBookElectronic();
+            case PLAIN: return new RecordBook();
+            case ELECTRONIC: return new RecordBookElectronic();
             default: return null;
         }
     }
 
-    public IDocument createStudentCard(String type) {
+    public IDocument createStudentCard(DocumentType type) {
         switch (type) {
-            case "Plain": return new StudentCard();
-            case "Electronic": return new StudentCardElectronic();
+            case PLAIN: return new StudentCard();
+            case ELECTRONIC: return new StudentCardElectronic();
             default: return null;
         }
     }
